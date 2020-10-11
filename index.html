@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor-form">
+            <h1>Serie Fibonacci</h1>
+            <h4>Seleccione el número de términos</h4>
+            <select class="elem" name="numero" id="numero"><!--- LISTA DE NUMEROS ENTEROS (1 - 50)-->
+                <option value="error">---Escoge un número---</option>
+                <script>
+                        for (var num = 1; num <= 50; num++){
+                            document.write('<option value='+ num + '>' + num + '</option>');
+                        }
+                </script>
+            </select>
+            <div class="algoritmo">
+                <div>
+                    <input type="radio" name="algoritmo" id="recursivo" value="1">
+                    <label for="recursivo">Algoritmo Recursivo</label>
+                </div>
+                <div>
+                    <input type="radio" name="algoritmo" id="no-recursivo" value="2">
+                    <label for="recursivo">Algoritmo No Recursivo</label>
+                </div>
+            </div>
+            <input class="elem" type="button" value="Calcular" onclick="calcular()"><!--- BOTON PARA CALCULAR-->
+            <textarea class="elem" name="resultado" id="resultado" readonly></textarea><!--- TEXT AREA PARA EL RESULTADO-->
+        </div><!--- TERMINACION DE CONTENEDOR-FORM-->
+    </div><!--- TERMINACION DE CONTENEDOR-->
+    <script src="js/fibonacci.js"></script>
+</body>
+</html>
